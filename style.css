@@ -1,7 +1,50 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 0 16px;
+  color: #222;
 }
-button{
-    padding: 10px;
+
+h1 { text-align: center; margin-bottom: 20px; }
+
+#taskInput {
+  width: calc(100% - 90px);
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 12px;
+  font-size: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+#taskList { list-style: none; padding: 0; margin-top: 20px; }
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+#taskList li.done span { text-decoration: line-through; color: #888; }
+#taskList li span { flex: 1; cursor: pointer; }
+
+button.del {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+@media (max-width: 480px) {
+  #taskInput { width: 100%; margin-bottom: 8px; }
+  button { width: 100%; margin-left: 0; }
 }
